@@ -13,6 +13,11 @@ public class Jokenpo {
 		System.out.println("--------------------");
 		System.out.println("      JOKENPO   ");
 		System.out.println("--------------------");
+		System.out.print("Quantas partidas? ");
+		int partidas = sc.nextInt();
+		System.out.println("");
+		
+		System.out.println("--------------------");
 		System.out.println("1 - Pedra");
 		System.out.println("2 - Papel");
 		System.out.println("3 - Tesoura");
