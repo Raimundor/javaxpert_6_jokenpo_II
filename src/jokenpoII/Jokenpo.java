@@ -29,46 +29,33 @@ public class Jokenpo {
 			System.out.println("");
 			System.out.println("Partida " + contador);
 			contador = contador + 1;
-			
+
 			System.out.print("Qual a sua opção: ");
 			int jogador = sc.nextInt();
 
 			System.out.println("");
-			if (jogador == 1) {
-				System.out.println("Você escolheu PEDRA");
-			} else if (jogador == 2) {
-				System.out.println("Você escolheu PAPEL");
-			} else if (jogador == 3) {
-				System.out.println("Você escolheu TESOURA");
-			} else {
-				System.out.println("Opção incorreta, informe novamente");
-			}
 
-			int computador = random.nextInt(3) + 1;
-			if (computador == 1) {
-				System.out.println("Computador escolheu PEDRA");
-			} else if (computador == 2) {
-				System.out.println("Computador escolheu PAPEL");
-			} else {
-				System.out.println("Computador escolheu TESOURA");
-			}
+			Resultado jog = new Resultado();
+			jog.jogador(jogador);
+			int comp = jog.computador();
 
 			System.out.println("");
-			if (jogador == computador) {
+			
+			if (jogador == comp) {
 				System.out.println("Empatou!!!");
-			} else if (jogador == 1 && computador == 2) {
-				System.out.println("Computador ganhou.");
-			} else if (jogador == 2 && computador == 3) {
-				System.out.println("Computador ganhou.");
-			} else if (jogador == 3 && computador == 1) {
-				System.out.println("Computador ganhou.");
+			} else if (jogador == 1 && comp == 2) {
+				System.out.println("Computador ganhou esta.");
+			} else if (jogador == 2 && comp == 3) {
+				System.out.println("Computador ganhou esta.");
+			} else if (jogador == 3 && comp == 1) {
+				System.out.println("Computador ganhou esta.");
 			} else if (jogador > 3) {
 				System.out.println("");
 			} else {
 				System.out.println("Você ganhou esta!!!!");
 			}
+
 		}
-		
 
 		sc.close();
 	}
