@@ -24,6 +24,9 @@ public class Jokenpo {
 		System.out.println("--------------------");
 		System.out.println("");
 
+		int vit = 0;
+		int joga = 0;
+
 		int contador = 1;
 		while (contador <= partidas) {
 			System.out.println("");
@@ -40,22 +43,28 @@ public class Jokenpo {
 			int comp = jog.computador();
 
 			System.out.println("");
-			
+
 			if (jogador == comp) {
 				System.out.println("Empatou!!!");
 			} else if (jogador == 1 && comp == 2) {
 				System.out.println("Computador ganhou esta.");
+				vit++;
 			} else if (jogador == 2 && comp == 3) {
 				System.out.println("Computador ganhou esta.");
+				vit++;
 			} else if (jogador == 3 && comp == 1) {
 				System.out.println("Computador ganhou esta.");
+				vit++;
 			} else if (jogador > 3) {
 				System.out.println("");
 			} else {
 				System.out.println("Você ganhou esta!!!!");
+				joga++;
 			}
 
 		}
+
+		System.out.println("computador " + vit + " jogador " + joga);
 
 		sc.close();
 	}
